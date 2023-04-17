@@ -17,7 +17,7 @@ const CreateNewBoat: FC<CreateNewBoatProps> = ({}) => {
   
   
     const clickHandler = () => {
-        fetch('http://localhost:9999/api/v1/new-contact', {
+        fetch('http://localhost:9999/api/v1/new-boat', {
             method: "POST",
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify
