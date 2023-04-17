@@ -34,8 +34,27 @@ app.use(cors(
     }
     })
 
+    //route to get all boats
+    app.get('/api/v1/all-boats' , async (req,res) => {
+        try {
+            const data = await boatDataSet.find()
+            res.status(200).json(data)
+        } catch (err) {
+            console.log(err.message)
+            res.status(500).json({message: err.message})
+        }
+    })
 
-
+    //route to get all booked boats
+    app.get('/api/v1/booked-boats', async (req,res) => {
+        try {
+            const data = await boatDataSet.find({bookedStatus: true})
+            res.status(200).json(data)
+        } catch (err) {
+            console.log(err.message)
+            res.status(500).json({message: err.message})
+        }
+    })
 
 
 
