@@ -56,6 +56,17 @@ app.use(cors(
         }
     })
 
+    //route to get all available boats
+    app.get('/api/v1/available-boats' , async (req,res) => {
+        try {
+            const data = await boatDataSet.find({bookedStatus: false})
+            res.status(200).json(data)
+        } catch (err) {
+            console.log(err.message)
+            res.status(500).json({message: err.message})
+        }
+    })
+
     //route to change bookedStatus
     app.post('/api/v1/set-booking-status', async (req,res) => {
         

@@ -23,10 +23,16 @@ const Home: FC<HomeProps> = ({}) => {
     return (
     <main>
             {allBoatData?.map((boat) => {
+                
                 return(
                    <SingleBoat 
                         key={uuidv4()}
-                        
+                        boatId={boat._id}
+                        boatName={boat.boatName}
+                        boatType={boat.boatType}
+                        constructionYear={boat.constructionYear}
+                        bookedStatus={boat.bookedStatus}
+
                    /> 
                 )
             })}
