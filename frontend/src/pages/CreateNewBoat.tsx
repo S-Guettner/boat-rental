@@ -1,4 +1,5 @@
 import { FC , useRef} from 'react'
+import { Link } from 'react-router-dom'
 
 
 interface CreateNewBoatProps {
@@ -45,8 +46,8 @@ const CreateNewBoat: FC<CreateNewBoatProps> = ({}) => {
               <input className='border-2 block' ref={serialNumber} placeholder='Serial-number' type="text" />
               <input className='border-2 block' ref={boatType} placeholder='Boat Type' type="text" />
               <button className='border-2' onClick={clickHandler} >Submit</button>
-                <button onClick={() => console.log(boatName.current?.value)} >test Button</button>
         </form>
+            <Link to={'/'}>Back to all boats </Link>
     </main>
   )
 }
