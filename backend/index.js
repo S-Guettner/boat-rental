@@ -56,7 +56,18 @@ app.use(cors(
         }
     })
 
-
+    //route to change bookedStatus
+    app.post('/api/v1/set-booking-status', async (req,res) => {
+        
+        try {
+            const data = await boatDataSet.findByIdAndUpdate(req.body.id, {$set:{bookedStatus:true}})
+            console.log(data.bookedStatus)
+            res.status(200).end(data.bookedStatus.toString())
+        } catch (err) {
+            console.log(err.message)
+            res.status(500).json({message: err.message})
+        }
+    })
 
 
 
