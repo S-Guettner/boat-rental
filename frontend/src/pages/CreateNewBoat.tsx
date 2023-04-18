@@ -29,7 +29,7 @@ const CreateNewBoat: FC<CreateNewBoatProps> = ({}) => {
                         "serialNumber": serialNumber.current?.value,
                         "boatType": boatType.current?.value,
                         "bookedFrom":"",
-                        "bookedTo":""
+                        "bookedTo":"",
 
                     }
                 )

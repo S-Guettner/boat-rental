@@ -1,4 +1,4 @@
-import { FC,useRef} from 'react'
+import { FC,useRef,useState} from 'react'
 
 interface AvailableBoatsProps {
     boatName:string,
@@ -14,6 +14,8 @@ const AvailableBoats: FC<AvailableBoatsProps> = ({ boatName, boatType, serialNum
     const bookedTo = useRef<HTMLInputElement>(null)
 
 
+
+
     const clickHandler = () => {
         //change bookedStatus
         fetch(`http://localhost:9999/api/v1/set-booking-status` , {
@@ -27,19 +29,21 @@ const AvailableBoats: FC<AvailableBoatsProps> = ({ boatName, boatType, serialNum
             )
         })
 
-        fetch(`http://localhost:9999/api/v1/set-booking-date` , {
-            method: "POST",
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify
-            (
-                {
-                    "id":id,
-                    "bookedFrom": bookedFrom.current?.value,
-                    "bookedTo": bookedTo.current?.value
-                    
-                }
-            )
-        })
+            fetch(`http://localhost:9999/api/v1/set-booking-date` , {
+                method: "POST",
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify
+                (
+                    {
+                        "id":id,
+                        "bookedFrom": bookedFrom.current?.value,
+                        "bookedTo": bookedTo.current?.value
+      
+                        
+                    }
+                )
+            })
+
 
 
         
