@@ -3,10 +3,11 @@ import { FC,useRef} from 'react'
 interface AvailableBoatsProps {
     boatName:string,
     boatType:string,
-    serialNumber:string
+    serialNumber:string,
+    id:string
 }
 
-const AvailableBoats: FC<AvailableBoatsProps> = ({ boatName, boatType, serialNumber  }) => {
+const AvailableBoats: FC<AvailableBoatsProps> = ({ boatName, boatType, serialNumber, id  }) => {
   
 
     const bookedFrom = useRef<HTMLInputElement>(null)
@@ -14,7 +15,34 @@ const AvailableBoats: FC<AvailableBoatsProps> = ({ boatName, boatType, serialNum
 
 
     const clickHandler = () => {
+        //change bookedStatus
+        fetch(`http://localhost:9999/api/v1/set-booking-status` , {
+            method: "POST",
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify
+            (
+                {
+                    "id":id
+                }
+            )
+        })
 
+        fetch(`http://localhost:9999/api/v1/set-booking-date` , {
+            method: "POST",
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify
+            (
+                {
+                    "id":id,
+                    "bookedFrom": bookedFrom.current?.value,
+                    "bookedTo": bookedTo.current?.value
+                    
+                }
+            )
+        })
+
+
+        
     }
   
   

@@ -33,6 +33,7 @@ const Reservation: FC<ReservationProps> = ({}) => {
                         boatName={item.boatName}
                         boatType={item.boatType}
                         serialNumber={item.serialNumber}
+                        id={item._id}
                    />
                 )
             })}

@@ -27,7 +27,9 @@ const CreateNewBoat: FC<CreateNewBoatProps> = ({}) => {
                         "constructionYear": (constructionYear.current?.value)?.toString(),
                         "material": material.current?.value,
                         "serialNumber": serialNumber.current?.value,
-                        "boatType": boatType.current?.value
+                        "boatType": boatType.current?.value,
+                        "bookedFrom":"",
+                        "bookedTo":""
 
                     }
                 )
