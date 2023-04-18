@@ -71,13 +71,26 @@ app.use(cors(
     app.post('/api/v1/set-booking-status', async (req,res) => {
         try {
             const data = await boatDataSet.findByIdAndUpdate(req.body.id, {$set:{bookedStatus:true}})
-            console.log(data.bookedStatus)
             res.status(200).end(data.bookedStatus.toString())
         } catch (err) {
             console.log(err.message)
             res.status(500).json({message: err.message})
         }
     })
+
+    //route to add booking date
+        app.post('/api/v1/set-booking-date', async (req,res) => {
+            try {
+                const bookedFrom = await boatDataSet.findByIdAndUpdate(req.body.id, {$set:{bookedFrom:req.body.bookedFrom}})
+                console.log(req.body.id)
+            const bookedTo = await boatDataSet.findByIdAndUpdate(req.body.id, {$set:{bookedTo:req.body.bookedTo}})
+            res.status(200).end(bookedFrom.bookedFrom,bookedTo.bookedTo)
+        } catch (err) {
+            console.log(err.message)
+            res.status(500).json({message: err.message})
+        }
+    })
+
 
     //route to find boat with specific id
     app.get('/api/v1/get-details/:id', async (req,res) => {
