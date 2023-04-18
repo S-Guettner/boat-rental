@@ -40,17 +40,17 @@ const boatData = mongoose.Schema(
 
         bookedFrom: {
             type: String,
-            minLength: 1
+            /* minLength: 1 */
         },
 
         bookedTo: {
             type: String,
-            minLength: 1
+            /* minLength: 1 */
         },
 
         bookingNumber: {
             type: String,
-            minLength: 1
+            /* minLength: 1 */
         }
     },
 
