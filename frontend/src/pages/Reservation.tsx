@@ -1,5 +1,6 @@
 import { FC,useState,useEffect } from 'react'
 import {BoatData} from '../interfaces'
+import { Link } from 'react-router-dom'
 
 import { v4 as uuidv4 } from 'uuid'
 import AvailableBoats from '../components/AvailableBoats'
@@ -24,7 +25,7 @@ const Reservation: FC<ReservationProps> = ({}) => {
     return (
     <div>
         <p>Reservation</p>
-        <p>all available Boats :</p>
+        <p className='mb-4'>all available Boats :</p>
             {availableBoats?.map((item) => {
                 console.log(item)
                 return(
@@ -37,7 +38,7 @@ const Reservation: FC<ReservationProps> = ({}) => {
                    />
                 )
             })}
-
+        <Link to={'/'}  className='border-2 p-2'>Back to Overview</Link>
     </div>
   )
 }
