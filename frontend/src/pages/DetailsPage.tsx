@@ -1,7 +1,8 @@
 import { FC,useEffect,useState } from 'react'
 import { useParams } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { BoatData } from '../interfaces' 
-import BoatDetails from '../components/BoatDetails'
+
 import { v4 as uuidv4 } from 'uuid'
 
 interface DetailsPageProps {
@@ -42,8 +43,8 @@ const DetailsPage: FC<DetailsPageProps> = ({}) => {
             <p>Boat material: {detailsData?.material}</p>
             <p>Boat serialNumber: {detailsData?.serialNumber}</p>
             <p>Boat createdAt: {detailsData?.createdAt}</p>
-            <p>Boat bookedStatus: {detailsData?.bookedStatus.toString()}</p>
-            
+            <p className='mb-4'>Boat bookedStatus: {detailsData?.bookedStatus.toString()}</p>
+            <Link to={'/'} className='border-2 p-2'>Go Back</Link>
     </div>
   )
 }
