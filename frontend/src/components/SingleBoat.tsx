@@ -6,20 +6,21 @@ interface SingleBoatProps {
     boatType:string,
     constructionYear:string,
     bookedStatus:boolean,
-    boatId:string
+    boatId:string,
+    bookedFrom:string,
+    bookedTo:string
+
 }
 
-const SingleBoat: FC<SingleBoatProps> = ({ boatName, boatType, constructionYear, bookedStatus, boatId }) => {
-    console.log(boatId)
+const SingleBoat: FC<SingleBoatProps> = ({ boatName, boatType, constructionYear, bookedStatus, boatId ,bookedFrom,bookedTo }) => {
+
     return (
     <div className='flex gap-6'>
-          <p>name of the boat: {boatName}</p>
-          <p>type of the boat: {boatType}</p>
-          <p>year: {constructionYear}</p>
-          <p>{bookedStatus.toString()}</p>
-          <p></p>
-          <p></p>
-            <Link className='border-2 bg-orange-500' to={`/details/${boatId}`}>To details</Link>
+          <p>name: {boatName}</p>
+          <p>type: {boatType}</p>
+          <p>Construction year: {constructionYear}</p>
+          <p>{bookedStatus ? "Booked from:" +" "+ bookedFrom +" "+"to"+ " " +bookedTo : "" }</p>
+          <Link className='border-2 bg-orange-500' to={`/details/${boatId}`}>To details</Link>
     </div>
   )
 }

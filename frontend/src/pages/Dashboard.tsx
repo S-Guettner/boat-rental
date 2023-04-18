@@ -43,11 +43,13 @@ const Dashboard: FC<HomeProps> = ({}) => {
 
   return (
     <main>
-      <h1>Home</h1>
+      <h1 className='text-2xl'>Dashboard</h1>
       <p>All Boats: {allBoatData.length.toString()}</p>
       <p>Booked Boats: {bookedBoatData.length.toString()}</p>
-      <p>Boats available: {(allBoatData.length - bookedBoatData.length).toString()}</p>
-      <Link className='border-2 ' to={'/new-boat'} > Create newBoat</Link>
+      <p className='mb-5'>Boats available: {(allBoatData.length - bookedBoatData.length).toString()}</p>
+      <Link className='border-2 p-2 ' to={'/new-boat'} > Add new Boat</Link>
+      <Link to={'/reservation'} className='inline-block p-2 m-4 border-2'>reservation</Link>
+      <Link className='border-2 p-2' to={'/'} > Go back</Link>
     </main>
   )
 }
