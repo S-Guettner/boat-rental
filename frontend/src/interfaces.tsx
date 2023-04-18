@@ -14,7 +14,9 @@ export interface BoatData {
     serialNumber: string,
     updatedAt: string,
     _v: number,
-    _id: string
+    _id: string,
+    bookedFrom:string,
+    bookedTo:string
 }
 
 
