@@ -14,7 +14,7 @@ const Reservation: FC<ReservationProps> = ({}) => {
     const [availableBoats, setAvailableBoats] = useState<BoatData[]>([])
     
     useEffect(() => {
-        fetch('https://boat-rental-backend.vercel.app/api/v1/available-boats')
+        fetch('https://boat-rental-backend-mys76hkh3-s-guettner.vercel.app/api/v1/available-boats')
         .then(res => res.json())
         .then((data: BoatData[]) => {
             console.log(data) 

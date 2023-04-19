@@ -41,14 +41,14 @@ const CreateNewBoat: FC<CreateNewBoatProps> = ({}) => {
     return (
     <main>
         <h1>Add new BOAT</h1>
-        <form>
+    
               <input className='border-2 block' ref={boatName} placeholder='Boat Name' type="text" />
               <input className='border-2 block' ref={constructionYear} placeholder='Construction Year' type="number" />
               <input className='border-2 block' ref={material} placeholder='Material' type="text" />
               <input className='border-2 block' ref={serialNumber} placeholder='Serial-number' type="text" />
               <input className='border-2 block' ref={boatType} placeholder='Boat Type' type="text" />
               <button className='border-2 m-4 p-2 mb-10' onClick={clickHandler} >Submit</button>
-        </form>
+        
             <Link to={'/'} className='border-2 p-2'>Back to all boats </Link>
     </main>
   )

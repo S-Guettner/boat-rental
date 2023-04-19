@@ -25,13 +25,13 @@ const Dashboard: FC<HomeProps> = ({}) => {
   const [bookedBoatData,setBookedBoatData] = useState<BoatData[]>([])
 
   useEffect(() => {
-    fetch('https://boat-rental-backend.vercel.app/api/v1/all-boats')
+    fetch('https://boat-rental-backend-mys76hkh3-s-guettner.vercel.app/api/v1/all-boats')
     .then(res => res.json())
       .then((data: BoatData[] ) => {
       console.log(data)
       setAllBoatData(data)
     })
-    fetch('https://boat-rental-backend.vercel.app/api/v1/booked-boats')
+    fetch('https://boat-rental-backend-mys76hkh3-s-guettner.vercel.app/api/v1/booked-boats')
     .then(res => res.json())
     .then((data: BoatData[]) => {
       console.log(data)

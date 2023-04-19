@@ -16,7 +16,7 @@ const SingleBoat: FC<SingleBoatProps> = ({ boatName, boatType, constructionYear,
 
     return (
     <div className='flex gap-6'>
-          <p>name: {boatName}</p>
+          <p>{boatName}</p>
           <p>type: {boatType}</p>
           <p>Construction year: {constructionYear}</p>
           <p>{bookedStatus ? "Booked from:" +" "+ bookedFrom +" "+"to"+ " " +bookedTo : "" }</p>
