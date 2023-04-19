@@ -27,7 +27,7 @@ const DetailsPage: FC<DetailsPageProps> = ({}) => {
     const {id} = useParams()
     
     useEffect(() => {
-        fetch(`http://localhost:9999/api/v1/get-details/${id}`)
+        fetch(`https://boat-rental-backend.vercel.app/api/v1/get-details/${id}`)
         .then(res => res.json())
             .then((data: BoatObject) => {
         console.log(data)

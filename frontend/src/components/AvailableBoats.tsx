@@ -18,7 +18,7 @@ const AvailableBoats: FC<AvailableBoatsProps> = ({ boatName, boatType, serialNum
 
     const clickHandler = () => {
         //change bookedStatus
-        fetch(`http://localhost:9999/api/v1/set-booking-status` , {
+        fetch(`https://boat-rental-backend.vercel.app/api/v1/set-booking-status` , {
             method: "POST",
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify
@@ -29,7 +29,7 @@ const AvailableBoats: FC<AvailableBoatsProps> = ({ boatName, boatType, serialNum
             )
         })
 
-            fetch(`http://localhost:9999/api/v1/set-booking-date` , {
+        fetch(`https://boat-rental-backend.vercel.app/api/v1/set-booking-date` , {
                 method: "POST",
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify

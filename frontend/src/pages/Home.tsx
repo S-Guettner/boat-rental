@@ -13,7 +13,7 @@ const Home: FC<HomeProps> = ({}) => {
     const [allBoatData, setAllBoatData] = useState<BoatData[]>([])
 
     useEffect(() => {
-        fetch('http://localhost:9999/api/v1/all-boats')
+        fetch('https://boat-rental-backend.vercel.app/api/v1/all-boats')
         .then(res => res.json())
         .then((data: BoatData[]) => {
             console.log(data)
