@@ -52,9 +52,9 @@ const AvailableBoats: FC<AvailableBoatsProps> = ({ boatName, boatType, serialNum
   
     return (
     <div className='border-2 inline-block p-2 mb-10'>
-          <p>Name:{boatName}</p>
-          <p>Type:{boatType}</p>
-          <p>serialNumber:{serialNumber}</p>
+          <p>{boatName}</p>
+          <p>{boatType}</p>
+          <p>{serialNumber}</p>
             
                 <label className='block' htmlFor="from">Book from: </label>
                 <input ref={bookedFrom} type="date" name="from" id="" />

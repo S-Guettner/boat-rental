@@ -24,6 +24,7 @@ const Reservation: FC<ReservationProps> = ({}) => {
     
     return (
     <div>
+        <div>
         <p>Reservation</p>
         <p className='mb-4'>all available Boats :</p>
             {availableBoats?.map((item) => {
@@ -38,7 +39,8 @@ const Reservation: FC<ReservationProps> = ({}) => {
                    />
                 )
             })}
-        <Link to={'/'}  className='border-2 p-2'>Back to Overview</Link>
+        </div>
+        <Link to={'/'}  className='border-2 p-2 m-4'>Back to Overview</Link>
     </div>
   )
 }
