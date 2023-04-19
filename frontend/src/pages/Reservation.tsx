@@ -25,7 +25,7 @@ const Reservation: FC<ReservationProps> = ({}) => {
     return (
     <div>
         <div>
-        <p>Reservation</p>
+        <h1 className='text-4xl text-center pt-4'>Reservation</h1>
         <p className='mb-4'>all available Boats :</p>
             {availableBoats?.map((item) => {
                 console.log(item)
