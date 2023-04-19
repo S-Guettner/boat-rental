@@ -47,7 +47,7 @@ const Dashboard: FC<HomeProps> = ({}) => {
       <div className='flex justify-around items-center mb-24'>
       <p className='border-2 p-2 rounded-lg text-2xl'>All Boats: {allBoatData.length.toString()}</p>
       <p className='border-2 p-2 rounded-lg text-2xl'>Booked Boats: {bookedBoatData.length.toString()}</p>
-      <p className='mb-5 border-2 p-2 rounded-lg text-2xl'>Boats available: {(allBoatData.length - bookedBoatData.length).toString()}</p>
+      <p className='border-2 p-2 rounded-lg text-2xl'>Boats available: {(allBoatData.length - bookedBoatData.length).toString()}</p>
       </div>
       <div className='flex items-center justify-center'>
       <Link className='border-2 p-2 ' to={'/new-boat'} > Add new Boat</Link>
