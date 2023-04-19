@@ -39,17 +39,18 @@ const CreateNewBoat: FC<CreateNewBoatProps> = ({}) => {
   
   
     return (
-    <main>
-        <h1>Add new BOAT</h1>
-    
-              <input className='border-2 block' ref={boatName} placeholder='Boat Name' type="text" />
-              <input className='border-2 block' ref={constructionYear} placeholder='Construction Year' type="number" />
-              <input className='border-2 block' ref={material} placeholder='Material' type="text" />
-              <input className='border-2 block' ref={serialNumber} placeholder='Serial-number' type="text" />
-              <input className='border-2 block' ref={boatType} placeholder='Boat Type' type="text" />
-              <button className='border-2 m-4 p-2 mb-10' onClick={clickHandler} >Submit</button>
+    <main >
+        <h1 className='text-center text-4xl mb-20'>Add new Boat</h1>
+            <div className='w-48 mx-auto'>
+              <input className='border-2 block w-48' ref={boatName} placeholder='Boat Name' type="text" />
+              <input className='border-2 block w-48' ref={constructionYear} placeholder='Construction Year' type="number" />
+              <input className='border-2 block w-48' ref={material} placeholder='Material' type="text" />
+              <input className='border-2 block w-48' ref={serialNumber} placeholder='Serial-number' type="text" />
+              <input className='border-2 block w-48' ref={boatType} placeholder='Boat Type' type="text" />
+              <button className='border-2 mt-2 mb-10 w-48' onClick={clickHandler} >Submit</button>
+            </div>
         
-            <Link to={'/'} className='border-2 p-2'>Back to all boats </Link>
+            <Link to={'/'} className='border-2 p-2 m-4'>Back to all boats </Link>
     </main>
   )
 }
