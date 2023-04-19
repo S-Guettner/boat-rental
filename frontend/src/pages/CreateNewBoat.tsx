@@ -40,7 +40,7 @@ const CreateNewBoat: FC<CreateNewBoatProps> = ({}) => {
   
     return (
     <main >
-        <h1 className='text-center text-4xl mb-20'>Add new Boat</h1>
+        <h1 className='text-center text-4xl mb-20 pt-4'>Add new Boat</h1>
             <div className='w-48 mx-auto'>
               <input className='border-2 block w-48' ref={boatName} placeholder='Boat Name' type="text" />
               <input className='border-2 block w-48' ref={constructionYear} placeholder='Construction Year' type="number" />
