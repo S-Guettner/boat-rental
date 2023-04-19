@@ -43,13 +43,17 @@ const Dashboard: FC<HomeProps> = ({}) => {
 
   return (
     <main>
-      <h1 className='text-2xl'>Dashboard</h1>
-      <p>All Boats: {allBoatData.length.toString()}</p>
-      <p>Booked Boats: {bookedBoatData.length.toString()}</p>
-      <p className='mb-5'>Boats available: {(allBoatData.length - bookedBoatData.length).toString()}</p>
+      <h1 className='text-4xl text-center pt-4 mb-36'>Dashboard</h1>
+      <div className='flex justify-around items-center mb-24'>
+      <p className='border-2 p-2 rounded-lg text-2xl'>All Boats: {allBoatData.length.toString()}</p>
+      <p className='border-2 p-2 rounded-lg text-2xl'>Booked Boats: {bookedBoatData.length.toString()}</p>
+      <p className='mb-5 border-2 p-2 rounded-lg text-2xl'>Boats available: {(allBoatData.length - bookedBoatData.length).toString()}</p>
+      </div>
+      <div className='flex items-center justify-center'>
       <Link className='border-2 p-2 ' to={'/new-boat'} > Add new Boat</Link>
       <Link to={'/reservation'} className='inline-block p-2 m-4 border-2'>reservation</Link>
       <Link className='border-2 p-2' to={'/'} > Go back</Link>
+      </div>
     </main>
   )
 }
