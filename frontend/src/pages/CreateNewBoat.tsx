@@ -17,7 +17,7 @@ const CreateNewBoat: FC<CreateNewBoatProps> = ({}) => {
   
   
     const clickHandler = () => {
-        fetch('https://boat-rental-backend.vercel.app/api/v1/new-boat', {
+        fetch('https://boat-rental-backend-j66lnxb9q-s-guettner.vercel.app/api/v1/new-boat', {
             method: "POST",
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify
