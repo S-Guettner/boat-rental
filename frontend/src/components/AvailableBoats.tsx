@@ -55,13 +55,13 @@ const AvailableBoats: FC<AvailableBoatsProps> = ({ boatName, boatType, serialNum
           <p>Name:{boatName}</p>
           <p>Type:{boatType}</p>
           <p>serialNumber:{serialNumber}</p>
-            <form>
+            
                 <label className='block' htmlFor="from">Book from: </label>
                 <input ref={bookedFrom} type="date" name="from" id="" />
                 <label className='block' htmlFor="to">To: </label>
                 <input ref={bookedTo} className='block' type="date" name="to" id="" />
                 <button onClick={clickHandler} className='border-2'>Submit reservation</button>
-            </form>
+            
     </div>
   )
 }

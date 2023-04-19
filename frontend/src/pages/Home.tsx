@@ -23,6 +23,9 @@ const Home: FC<HomeProps> = ({}) => {
   
     return (
     <main>
+        <section className='shadow-md mb-4'>
+                <img className='w-28' src="https://ik.imagekit.io/6sicju8qu/boat-logo-design_412311-3874.avif?updatedAt=1681908458914" alt="boat-logo" />
+        </section>
         <div>
             {allBoatData?.map((boat) => {
                 console.log(boat)
