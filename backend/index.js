@@ -14,7 +14,7 @@ app.use(morgan("combined"))
 
 app.use(cors(
     {
-        origin: '*',
+        origin: 'https://boat-rental-frontend-ny50z2htx-s-guettner.vercel.app',
         methods: ['GET', 'POST'],
         allowedHeaders: ['Content-Type', 'Authorization'],
         preflightContinue: false,
